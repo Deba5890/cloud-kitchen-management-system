@@ -88,7 +88,7 @@ const getDashboard = async (req, res) => {
 
       {
         $group: {
-          _id: "$items.menu",
+          _id: "$items.menuId",
           totalSold: {
             $sum: "$items.quantity",
           },
