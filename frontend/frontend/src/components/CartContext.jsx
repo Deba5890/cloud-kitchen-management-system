@@ -14,7 +14,7 @@ setCartItems((prevItems) => {
 
 const existingItem = prevItems.find(
 
-(i) => i.id === item._id
+(i) => i._id === item._id
 
 );
 
@@ -22,7 +22,7 @@ if (existingItem) {
 
 return prevItems.map((i) =>
 
-i.id === item._id
+i._id === item._id
 
 ? { ...i, quantity: i.quantity + quantity }
 

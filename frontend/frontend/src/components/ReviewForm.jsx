@@ -12,7 +12,7 @@ function ReviewForm({ menuId, fetchReviews }) {
     const token = localStorage.getItem("token");
 
     if (!token) {
-      alert("Please login first");
+    toast.error("Please login first");
       return;
     }
 
@@ -29,6 +29,8 @@ function ReviewForm({ menuId, fetchReviews }) {
           },
         }
       );
+          console.log(res.data);
+
           toast.success("Review Submitted ⭐");
 
 

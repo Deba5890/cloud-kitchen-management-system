@@ -1,4 +1,6 @@
 import { Routes, Route } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -23,6 +25,15 @@ import Favorites from "./pages/Favorites";
 function App() {
   return (
     <>
+    <ToastContainer
+        position="top-right"
+        autoClose={3000}
+        hideProgressBar={false}
+        newestOnTop
+        closeOnClick
+        pauseOnHover
+        theme="colored"
+      />
       <Navbar />
 
       <Routes>
