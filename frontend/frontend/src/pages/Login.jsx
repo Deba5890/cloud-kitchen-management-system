@@ -41,7 +41,7 @@ try {
 
 setLoading(true);
 
-const res = await API.post("/auth/login", formData);
+const res = await API.post("/api/auth/login", formData);
 console.log("LOGIN RESPONSE:", res.data);
 localStorage.setItem("token", res.data.token);
 localStorage.setItem("user", JSON.stringify(res.data.user));

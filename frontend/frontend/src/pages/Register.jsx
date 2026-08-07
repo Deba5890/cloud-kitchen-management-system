@@ -41,8 +41,8 @@ e.preventDefault();
 try {
 
 setLoading(true);
+await API.post("/api/auth/register", formData);
 
-await API.post("/auth/register", formData);
 toast.success("Account Created Successfully 🎉");
 navigate("/login");
 
